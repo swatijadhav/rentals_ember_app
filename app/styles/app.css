@@ -1,0 +1,36 @@
+.user_links {
+  float: right;
+  margin-top: 1.6rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background: gray;
+}
+
+.form-group {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.form-group .button {
+  float: left;
+}
+
+input, textarea, select, input[type="text"][readonly] {
+  width: 50%;
+  margin: 0.2rem 0;
+  background: white;
+  box-shadow: none;
+  -webkit-box-sizing: none;
+  -moz-box-sizing: none;
+  box-sizing: none;
+  transition: none;
+  height: 100%;
+  padding: 0.4rem 0.2rem;
+}
+input, textarea, select, label {
+  @media #{$small-only} {
+  font-size: 0.8rem;
+  }
+}

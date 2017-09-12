@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="menu">
+    {{#link-to 'index'}}
+      <h1>
+        <em>SuperRentals</em>
+      </h1>
+    {{/link-to}}
+    <div class="links">
+      {{#link-to 'about'}}
+        About
+      {{/link-to}}
+      {{#link-to 'contact'}}
+        Contact
+      {{/link-to}}
+      {{#if session.currentUser}}
+        {{#link-to 'rentals'}}
+          Rentals
+        {{/link-to}}
+      {{/if}}
+    </div>
+    <div class="links user_links">
+      {{#unless session.currentUser}}
+        {{#link-to 'login'}}
+          Login
+        {{/link-to}}
+        {{#link-to 'signup'}}
+          Register
+        {{/link-to}}
+      {{else}}
+        <a href="#">Welcome {{session.currentUser.name}}!</a>
+        <a href="#" {{action "logout"}}>
+          Logout
+        </a>
+      {{/unless}}
+    </div>
+
+  </div>
+  <div class="body">
+    {{outlet}}
+  </div>
+</div>
